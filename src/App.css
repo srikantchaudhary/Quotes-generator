@@ -1,38 +1,70 @@
+#root, html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .App {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./img/img1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  background-color: whitesmoke;
+  width: 40%;
+  min-height: 20%;
+  max-width: 600px; /* Limit card width for larger screens */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+  padding: 2%;
+  box-shadow: 10px 10px rgb(148, 123, 123);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  height: 100%; /* Adjust heading height */
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
   color: white;
+  background-color: darkgreen;
+  border: none;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all .3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  background-color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 600px) {
+  .card {
+    width: 80%;
+    min-height: 40%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .heading {
+    font-size: 2rem; /* Adjust heading font size */
+  }
+
+  .btn {
+    width: 80px;
+    height: 30px;
+    font-size: 0.8rem;
   }
 }
